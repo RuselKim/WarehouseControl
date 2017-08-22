@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">WarehouseControl</string>
+    <string name="edit_massage">Enter Item name</string>
+    <string name="btnAdd">ADD</string>
+    <string name="btnRemove">REMOVE</string>
 </resources>
