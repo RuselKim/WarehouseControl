@@ -8,27 +8,18 @@
     tools:context="com.example.sus.warehousecontrol.MainActivity"
     android:id="@+id/mainLayout">
 
-    <LinearLayout
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:orientation="horizontal">
+        android:text="@string/btnView_mainActivity"
+        android:layout_margin="20dp"
+        />
 
-        <EditText
-            android:id="@+id/item_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/edit_massage" />
-
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btnAdd"
-            android:onClick="createItem"/>
-
-    </LinearLayout>
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnEdit_mainActivity"
+        android:layout_margin="20dp"
+        />
 
 </LinearLayout>
