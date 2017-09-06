@@ -21,6 +21,8 @@
         android:text="sdfsdfdgf"
         android:textSize="30sp" />
 
+
+
     <TextView
         android:id="@+id/count_column"
         android:layout_width="60dp"
@@ -28,4 +30,26 @@
         android:layout_margin="10dp"
         android:text="5"
         android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/increment_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="+"/>
+
+    <Button
+        android:id="@+id/decrement_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:text="-" />
+
+    </LinearLayout>
+
 </LinearLayout>
