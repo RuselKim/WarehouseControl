@@ -1,6 +1,7 @@
 package com.example.sus.warehousecontrol.data;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -36,5 +37,45 @@ public class WarehouseDbHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
+    public void insertInTable (String name, int count){
+        SQLiteDatabase db = getWritableDatabase();
 
+        String insertValues = "INSERT INTO " +
+                BaseContract.WarehouseBase.TABLE_NAME
+                + " ( " + BaseContract.WarehouseBase.ITEM + ", "
+                + BaseContract.WarehouseBase.COUNT + ") VALUES (\""
+                + name + "\", " + count + ");";
+
+        db.execSQL(insertValues);
+    }
+
+    public void deleteFromTable (int id){
+        SQLiteDatabase db = getWritableDatabase();
+
+        String comandSring = "DELETE FRPM " +
+                BaseContract.WarehouseBase.TABLE_NAME
+                + " WHERE " + BaseContract.WarehouseBase._ID + " = "
+                + id + ";";
+
+        db.execSQL(comandSring);
+    }
+
+    public void updateInTable (int count,int id) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        String comandSring = "UPDATE " +
+                BaseContract.WarehouseBase.TABLE_NAME
+                + " SET " + BaseContract.WarehouseBase.COUNT
+                + " = " + count + " WHERE "
+                + BaseContract.WarehouseBase._ID + " = " + id + ";";
+
+        db.execSQL(comandSring);
+    }
+
+    public Cursor selectFromTable (String value) {
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT " + value + " FROM "
+                + BaseContract.WarehouseBase.TABLE_NAME;
+        return db.rawQuery(query,null);
+    }
 }

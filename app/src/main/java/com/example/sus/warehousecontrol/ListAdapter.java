@@ -26,15 +26,13 @@ public class ListAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
-        TextView id = (TextView) view.findViewById(R.id.id_column);
+
         TextView name = (TextView) view.findViewById(R.id.name_column);
         TextView email = (TextView) view.findViewById(R.id.count_column);
 
-        int intId = cursor.getInt(cursor.getColumnIndex(BaseContract.WarehouseBase._ID));
         String strName = cursor.getString(cursor.getColumnIndex(BaseContract.WarehouseBase.ITEM));
         String strCount = cursor.getString(cursor.getColumnIndex(BaseContract.WarehouseBase.COUNT));
 
-        id.setText(String.valueOf(intId));
         name.setText(strName);
         email.setText(strCount);
     }
