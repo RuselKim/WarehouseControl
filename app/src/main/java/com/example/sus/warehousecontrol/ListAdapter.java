@@ -36,4 +36,5 @@ public class ListAdapter extends CursorAdapter {
         name.setText(strName);
         email.setText(strCount);
     }
+
 }

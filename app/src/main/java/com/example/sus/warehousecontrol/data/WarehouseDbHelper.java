@@ -49,10 +49,10 @@ public class WarehouseDbHelper extends SQLiteOpenHelper {
         db.execSQL(insertValues);
     }
 
-    public void deleteFromTable (int id){
+    public void deleteFromTable (long id){
         SQLiteDatabase db = getWritableDatabase();
 
-        String comandSring = "DELETE FRPM " +
+        String comandSring = "DELETE FROM " +
                 BaseContract.WarehouseBase.TABLE_NAME
                 + " WHERE " + BaseContract.WarehouseBase._ID + " = "
                 + id + ";";
@@ -60,7 +60,7 @@ public class WarehouseDbHelper extends SQLiteOpenHelper {
         db.execSQL(comandSring);
     }
 
-    public void updateInTable (int count,int id) {
+    public void updateInTable (int count,long id) {
         SQLiteDatabase db = getWritableDatabase();
 
         String comandSring = "UPDATE " +

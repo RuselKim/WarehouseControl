@@ -13,12 +13,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public  void onViewClick (View view) {
+    public void onViewClick(View view) {
         Intent viewIntent = new Intent(MainActivity.this, ViewActivity.class);
         startActivity(viewIntent);
     }
 
-    public  void onEditClick (View view) {
+    public void onEditClick(View view) {
         Intent viewIntent = new Intent(MainActivity.this, EditActivity.class);
         startActivity(viewIntent);
     }
